@@ -1,0 +1,14 @@
+.recipe-container a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ccc;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+}
+
+.recipe-image {
+  max-height: 70px;
+  border-radius: 100%;
+}
