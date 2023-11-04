@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,16 +8,11 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.scss'],
 })
 export class RecipeListComponent {
-  recipes: Recipe[] = [
-    new Recipe(
-      'Recipe Title',
-      'This is the recipe description',
-      'assets/recipe-image.jpg'
-    ),
-    new Recipe(
-      'Recipe Title',
-      'This is the recipe description',
-      'assets/recipe-image.jpg'
-    ),
-  ];
+  recipes: Recipe[];
+
+  constructor(private recipeService: RecipeService) {}
+
+  ngOnInit() {
+    this.recipes = this.recipeService.getRecipes();
+  }
 }

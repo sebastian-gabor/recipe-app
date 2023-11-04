@@ -1,16 +1,20 @@
 <nav class="nav">
   <a href="#" class="nav-brand">Recipe Book</a>
   <ul class="nav-items">
-    <li class="nav-item"><a href="">Recipe</a></li>
-    <li class="nav-item"><a href="">Shopping List</a></li>
     <li class="nav-item">
+      <a href="#" (click)="onSelect('recipe')">Recipe</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+    </li>
+    <li class="nav-item dropdown" appDropdown>
       <button type="button" class="btn dropdown-toggle">
         Manage Recipe <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#">To Shopping List</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+        <li class="dropdown-item"><a href="#">To Shopping List</a></li>
+        <li class="dropdown-item"><a href="#">Edit Recipe</a></li>
+        <li class="dropdown-item"><a href="#">Delete Recipe</a></li>
       </ul>
     </li>
   </ul>
